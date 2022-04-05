@@ -1,4 +1,4 @@
-letter_list = [['a', 0]]
+letter_list = [[' ', 0]]
 
 while True:
     text = input('Введите слово: ')
@@ -10,11 +10,8 @@ while True:
                 if letter_list[i][0] == letter:
                     letter_list[i][1] += 1
                     break
-                else:
-                    letter_list.append(list(range(2)))
-                    letter_list[len(letter_list) - 1][0] = letter
-                    letter_list[len(letter_list) - 1][1] += 1
-                    break
-
+            else:
+                letter_list.append(list(range(2)))
+                letter_list[i + 1][0] = letter
 
         print(letter_list)
